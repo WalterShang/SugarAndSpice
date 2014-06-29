@@ -1,12 +1,35 @@
 /*!
- * Theme Sugar & Sprice
+ * Theme Sugar & Spice
  *
- * Coding by Sloger(http://blog.sloger.info) with sass.
+ * Coding by Sloger(http://blog.sloger.info)
+ * Written with Emacs
+ * Compiled by with sass
  * Designed by WebTus(http://webtuts.pl/)
  *
  * license: GPLv3
  **/
 
+=transition($time: .15s)
+  -webkit-transition: $time
+  -moz-transition: $time
+  -o-transition: $time
+  transition: $time
+
+=box-sizing($value : border-box)
+  -webkit-box-sizing: $value
+  -moz-box-sizing: $value
+  -o-box-sizing: $value
+  box-sizing: $value
+
+=clearfix
+  &:after, &:before
+    display: table
+    content: ''
+
+  &:after
+    clear: both
+
+@import 'font'
 @import 'global'
 @import 'header'
 @import 'content'

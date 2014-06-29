@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Sugar and Sprice
+ * Sugar and Spice
  *
- * @package Sugar & Sprice
+ * @package Sugar & Spice
  * @authore Sloger
  * @version 1.0.0
  * @link    http://blog.sloger.info

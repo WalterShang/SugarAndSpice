@@ -6,7 +6,7 @@
     display: block
     content: ''
     width: 1008px
-    background-image: url(images/hfbg.png)
+    background-image: url(img/hfbg.png)
     background-repeat: no-repeat
     background-size: cover 
 
@@ -20,7 +20,7 @@
 
 #site-header
   position: relative
-  background: url(images/contentbg.png) repeat-y top left
+  background: url(img/contentbg.png) repeat-y top left
   background-size: contain
 
   &:before
@@ -31,7 +31,7 @@
     width: 214px
     height: 393px
     z-index: 5
-    background: url(images/header-left-bg.png) 0 0 no-repeat
+    background: url(img/header-left-bg.png) 0 0 no-repeat
   
 #site-branding
   text-align: center
@@ -62,7 +62,7 @@
   top: -9px
   width: 41px
   height: 65px
-  background-image: url(images/ribbon-peach.png)
+  background-image: url(img/ribbon-peach.png)
 
 .ribbon-left
   left: -20px
@@ -87,7 +87,7 @@
     content: ''
     width: 100%
     height: 6px
-    background: url(images/menu-border.png) repeat-x top left
+    background: url(img/menu-border.png) repeat-x top left
 
   & > li
     position: relative
@@ -165,16 +165,41 @@
   display: block !important
   padding: 0
 
+#site-main
+  padding: 3em 34px 
+  overflow: hidden
+  background: url(img/contentbg.png) repeat-y top left
+  background-size: contain
+
+  +clearfix
+
+#site-content
+  width: 600px
+  float: left
+
+#site-aside
+  width: 300px
+  float: right
 
 #prefooter
   position: relative
-  background: url(images/contentbg.png) repeat-y top left    
+  background: url(img/contentbg.png) repeat-y top left    
   background-size: contain
+
+  &:after
+    position: absolute
+    left: 100%
+    bottom: 1px
+    content: ""
+    width: 214px
+    height: 393px
+    z-index: 5
+    background: url(img/footer-right-bg.png) 0 0 no-repeat
 
 #prefooter-inner
   margin: 0 4px
   padding: 3em 34px 0 
-  background: url(images/menu-border.png)repeat-x top left    
+  background: url(img/menu-border.png)repeat-x top left    
 
 #prefooter-inner > div:last-child
   margin-right: 0

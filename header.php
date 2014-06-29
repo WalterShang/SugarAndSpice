@@ -11,7 +11,6 @@
         'author'    =>  _t('%s 发布的文章')
       ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
-  <link rel="stylesheet" id="sugarspice-fonts-css" href="//fonts.googleapis.com/css?family=Niconne%7CPT%2BSerif%3A400%2C700%7CRaleway%3A400%2C600&amp;subset=latin%2Clatin-ext&amp;ver=3.9.1" type="text/css" media="all">
   <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
   <?php $this->header(); ?>
 </head>
@@ -54,4 +53,4 @@
       </div>
 	</header>
 
-  <div id="main">
+  <div id="site-main">

@@ -1,7 +1,7 @@
-Typecho Theme - Sugar & Sprice
+Typecho Theme - Sugar & Spice
 ---
 
-根据 WordPress 主题 [Sugar & Sprice][1] 改的
+根据 WordPress 主题 [Sugar & Spice][1] 改的
 
 ###效果图###
 
