@@ -465,6 +465,48 @@ img {
   padding: 8px 0 4px;
 }
 
+.page-navigator {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-navigator li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.page-navigator a {
+  padding: 10px;
+}
+
+#comment-form .field {
+  margin-bottom: 3px;
+  font-size: 0.85em;
+}
+#comment-form .field label {
+  display: block;
+}
+#comment-form .field input, #comment-form .field textarea {
+  padding: 7px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  line-height: 1.2em;
+  background: #f8f8f8;
+}
+#comment-form .field input:focus, #comment-form .field textarea:focus {
+  background: white;
+}
+#comment-form .field input {
+  width: 350px;
+  font-size: 1em;
+}
+#comment-form .field textarea {
+  width: 550px;
+  min-height: 150px;
+  resize: vertical;
+  font-size: 1em;
+}
+
 code {
   margin: 0 3px;
   padding: 0 3px;
