@@ -14,21 +14,18 @@
   font-weight: 400;
   src: local("Niconne"), local("Niconne-Regular"), url(fonts/niconne.woff) format("woff");
 }
-
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   src: local("Raleway"), url(fonts/raleway.woff) format("woff");
 }
-
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(fonts/raleway-semibold.woff) format("woff");
 }
-
 body {
   margin: 0;
   font-size: 87.5%;
@@ -490,6 +487,7 @@ img {
   padding: 7px;
   border: 1px solid #e6e6e6;
   outline: none;
+  color: #555555;
   line-height: 1.2em;
   background: #f8f8f8;
 }
@@ -505,6 +503,66 @@ img {
   min-height: 150px;
   resize: vertical;
   font-size: 1em;
+}
+
+#comment-form button {
+  padding: 5px 15px;
+  outline: none;
+  cursor: pointer;
+  color: #555555;
+  border: 1px solid #e6e6e6;
+  background: #f8f8f8;
+}
+#comment-form button:hover {
+  background: white;
+}
+
+.comments {
+  margin: 0;
+}
+
+.comment-list {
+  list-style: none;
+}
+.comment-list li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.comments > .comment-list {
+  padding: 0;
+}
+.comments > .comment-list > li {
+  margin: 30px 0;
+}
+.comments > .comment-list .comment-list .comment-list {
+  padding: 0;
+}
+
+.comment-author, .comment-meta, .comment-content {
+  padding-left: 40px;
+}
+
+.comment-author .avatar {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.comment-author cite {
+  font-style: normal;
+}
+
+.comment-reply {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+}
+
+#cancel-comment-reply-link {
+  font-size: 12px;
 }
 
 code {

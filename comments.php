@@ -2,7 +2,7 @@
 <div id="comments">
   <?php $this->comments()->to($comments); ?>
   <?php if ($comments->have()): ?>
-  <div class="widget">
+  <div class="comments widget">
     <h3>
       <span>
         <?php $this->commentsNum(_t('no <em>reply</em>'), _t('1 <em>reply</em>'), _t('%d <em>replies</em>')); ?>
