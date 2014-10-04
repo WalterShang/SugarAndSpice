@@ -1,4 +1,4 @@
-<div id="site-aside">
+<div class="site-aside">
   <div class="widget">
     <h3>
       <span>RECENT <em>REPLIES</em></span>
@@ -17,10 +17,9 @@
     <h3>
       <span><em>friends</em> links</span>
     </h3>
-    <div>
-      <ul class="list-left">
-        <?php Links_Plugin::output('
-          <li><a href="{url}" target="_blank">{name}</a></li>', 30); ?>
+    <div class="split-list">
+      <ul>
+      <?php Links_Plugin::output('<li><a href="{url}" target="_blank">{name}</a></li>'); ?>
       </ul>
     </div>
   </div>
@@ -28,12 +27,11 @@
 
   <div class="widget">
     <h3>
-      <span><em>archives</em></span>
+      <span>date <em>archives</em></span>
     </h3>
-    <div>
-      <ul class="list-left">
-      <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
-         ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
+    <div class="split-list">
+      <ul>
+      <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
       </ul>
     </div>
   </div>

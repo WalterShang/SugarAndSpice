@@ -1,22 +1,22 @@
     </div>
 
-    <div id="prefooter">
-      <div id="prefooter-inner">
-        <div class="footer-widget widget">
+    <div class="prefooter">
+      <div class="inner">
+        <div class="widget">
           <h3><span><em>search</em> insite</span></h3>
-          <form id="site-search" method="post" action="./">
+          <form class="site-search" method="post" action="./">
             <input type="text" name="s"placeholder="搜索" />
           </form>
         </div>
-        <div class="footer-widget widget">
+        <div class="widget">
           <h3><span><em>tags</em> cloud</span></h3>
-          <ul id="tag-list">
+          <ul class="tag-list">
             <?php $this->widget('Widget_Metas_Tag_Cloud')->parse('
                 <li><a href="{permalink}">{name}</a></li>
             '); ?> 
           </ul>
         </div>
-        <div class="footer-widget widget">
+        <div class="widget">
           <h3><span><em>metas</em></span></h3>
           <ul>
           <?php if($this->user->hasLogin()): ?>
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <footer id="footer" class="site-footer">
+  <footer class="site-footer">
     <div class="site-info">
       Powered by  <a href="http://typecho.org/">Typecho</a>
       <span class="sep"> | </span>
@@ -46,6 +46,7 @@
   </footer>
 
   <script src="<?php $this->options->adminUrl('js/jquery.js') ?>"></script>
+  <script src="<?php $this->options->themeUrl('script.js') ?>"></script>
   <?php $this->footer() ?>
 </body>
 </html>

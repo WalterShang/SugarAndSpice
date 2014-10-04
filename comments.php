@@ -11,7 +11,7 @@
     
     <?php $comments->listComments(); ?>
 
-    <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+    <?php $comments->pageNav('« 前一页', '后一页 »'); ?>
   </div>
   <?php endif; ?>
 
@@ -24,7 +24,7 @@
     <h3 id="response"><span>new <em>reply</em></span></h3>
     <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
       <?php if($this->user->hasLogin()): ?>
-      <div>
+      <div class="login-info">
         <?php _e('登录身份: '); ?>
         <a href="<?php $this->options->profileUrl(); ?>">
           <?php $this->user->screenName(); ?>

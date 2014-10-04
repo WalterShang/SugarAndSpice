@@ -14,18 +14,21 @@
   font-weight: 400;
   src: local("Niconne"), local("Niconne-Regular"), url(fonts/niconne.woff) format("woff");
 }
+
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   src: local("Raleway"), url(fonts/raleway.woff) format("woff");
 }
+
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(fonts/raleway-semibold.woff) format("woff");
 }
+
 body {
   margin: 0;
   font-size: 87.5%;
@@ -114,12 +117,12 @@ img {
   background-position: top left;
 }
 
-#site-header {
+.site-header {
   position: relative;
   background: url(img/contentbg.png) repeat-y top left;
   background-size: contain;
 }
-#site-header:before {
+.site-header:before {
   position: absolute;
   top: 1px;
   left: -211px;
@@ -130,21 +133,21 @@ img {
   background: url(img/header-left-bg.png) 0 0 no-repeat;
 }
 
-#site-branding {
+.site-branding {
   text-align: center;
 }
 
-#site-title {
+.site-title {
   margin: 0;
   font-family: "Niconne", cursive;
   font-size: 40px;
   font-weight: 400;
 }
-#site-title a {
+.site-title a {
   text-decoration: none;
 }
 
-#site-description {
+.site-description {
   margin: 0 0 2em 0;
   letter-spacing: 0.2em;
   font-family: "Raleway", sans-serif;
@@ -153,7 +156,7 @@ img {
   font-weight: normal;
 }
 
-#navbar {
+.site-navbar {
   text-align: center;
   position: relative;
 }
@@ -175,38 +178,34 @@ img {
   background-position: top right;
 }
 
-#navbar-nav {
+.navbar-nav {
   display: inline-block;
   margin: 0 auto;
   width: 94%;
-}
-#navbar-nav ul {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
-
-#nav:before, #nav:after {
+.navbar-nav:before, .navbar-nav:after {
   display: block;
   content: "";
   width: 100%;
   height: 6px;
   background: url(img/menu-border.png) repeat-x top left;
 }
-#nav > li {
+.navbar-nav > li {
   position: relative;
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-#nav > li:after {
+.navbar-nav > li:after {
   content: " \2022";
   color: #d2d2d2;
 }
-#nav > li:last-child:after {
+.navbar-nav > li:last-child:after {
   content: "";
 }
-#nav > li a {
+.navbar-nav > li a {
   display: inline-block;
   padding: 8px 24px;
   text-transform: uppercase;
@@ -216,10 +215,10 @@ img {
   font-size: 0.857em;
   color: #666666;
 }
-#nav > li a:hover {
+.navbar-nav > li a:hover {
   color: rgba(54, 171, 138, 0.7);
 }
-#nav > li.current a {
+.navbar-nav > li.current a {
   color: rgba(54, 171, 138, 0.7);
 }
 
@@ -266,41 +265,41 @@ img {
   text-decoration: none;
 }
 
-#nav li:hover ul {
+li.has-children:hover ul {
   display: block !important;
   padding: 0;
 }
 
-#site-main {
+.site-main {
   padding: 3em 34px;
   overflow: hidden;
   background: url(img/contentbg.png) repeat-y top left;
   background-size: contain;
 }
-#site-main:after, #site-main:before {
+.site-main:after, .site-main:before {
   display: table;
   content: "";
 }
-#site-main:after {
+.site-main:after {
   clear: both;
 }
 
-#site-content {
+.site-content {
   width: 600px;
   float: left;
 }
 
-#site-aside {
+.site-aside {
   width: 300px;
   float: right;
 }
 
-#prefooter {
+.prefooter {
   position: relative;
   background: url(img/contentbg.png) repeat-y top left;
   background-size: contain;
 }
-#prefooter:after {
+.prefooter:after {
   position: absolute;
   left: 100%;
   bottom: 1px;
@@ -310,48 +309,49 @@ img {
   z-index: 5;
   background: url(img/footer-right-bg.png) 0 0 no-repeat;
 }
-
-#prefooter-inner {
+.prefooter .inner {
   margin: 0 4px;
   padding: 3em 34px 0;
   background: url(img/menu-border.png) repeat-x top left;
 }
-
-#prefooter-inner > div:last-child {
+.prefooter .inner > div:last-child {
   margin-right: 0;
 }
 
-#footer {
+.site-footer {
   margin: 0.916em auto;
   width: 1000px;
   text-align: center;
   font-size: 85%;
 }
 
-.post-header {
+.post .header {
   text-align: center;
 }
-
-.post-title {
+.post .header .title {
   margin: 0;
   font-size: 1.5em;
   font-weight: 400;
 }
-
-.post-meta {
+.post .header .meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 0.786em;
   line-height: 3.818em;
-  text-align: center;
   background: url(img/border.png) no-repeat bottom center;
 }
-.post-meta span {
-  background: white;
+.post .header .meta li {
+  display: inline-block;
 }
-
-.post-content {
+.post .body {
   margin: 1.5em 0 2.5em;
+}
+.post .footer a {
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .more {
@@ -363,21 +363,14 @@ img {
   font-family: "Raleway", sans-serif;
 }
 
-.pagenavi {
-  clear: both;
-  display: block;
-  text-align: right;
-  width: 600px;
-  padding: 0 0 1.5em 0;
-  position: relative;
-  width: 100%;
-  display: block;
-}
 .pagenavi a {
-  margin: 0 3px 0 0;
-  padding: 0 5px 0;
   text-decoration: none;
-  border: none;
+}
+.pagenavi a.prev {
+  float: right;
+}
+.pagenavi a.next {
+  float: left;
 }
 
 .widget {
@@ -425,15 +418,30 @@ img {
   border-bottom: 1px dashed #eeeeee;
 }
 
-#prefooter-inner:after, #prefooter-inner:before {
+.page-navigator {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-navigator li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+}
+.page-navigator a {
+  padding: 10px;
+}
+
+.prefooter .inner:after, .prefooter .inner:before {
   display: table;
   content: "";
 }
-#prefooter-inner:after {
+.prefooter .inner:after {
   clear: both;
 }
 
-.footer-widget {
+.prefooter .widget {
   float: left;
   padding: 0 10px;
   width: 33.33333%;
@@ -443,7 +451,7 @@ img {
   box-sizing: border-box;
 }
 
-#site-search input {
+.site-search input {
   padding: 6px 10px;
   border: 1px solid #e6e6e6;
   outline: 0;
@@ -451,29 +459,20 @@ img {
   -moz-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 }
-#site-search button {
+.site-search button {
   border: 0;
   background: transparent;
 }
 
-#tag-list li {
+.tag-list li {
   display: inline-block;
   margin: 0 4px;
   padding: 8px 0 4px;
 }
 
-.page-navigator {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.page-navigator li {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-.page-navigator a {
-  padding: 10px;
+#comment-form .login-info {
+  margin-bottom: 10px;
+  font-size: 0.9em;
 }
 
 #comment-form .field {

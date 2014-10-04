@@ -1,4 +1,4 @@
-<html class="no-js">
+<html>
 <head>
   <meta charset="<?php $this->options->charset(); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -17,40 +17,40 @@
 
 <body>
   <div class="wrap">
-    <header id="site-header">
-      <div id="site-branding">
-        <h1 id="site-title">
+    <header class="site-header">
+      <div class="site-branding">
+        <h1 class="site-title">
           <a href="<?php $this->options->siteUrl() ?>">
             <?php $this->options->title() ?>
           </a>
         </h1>
-        <h2 id="site-description"><?php $this->options->description() ?></h2>
+        <h2 class="site-description">
+          <?php $this->options->description() ?>
+        </h2>
       </div>
-      <div id="navbar">
+
+      <div class="site-navbar">
         <div class="ribbon-left"></div>
-        <nav id="navbar-nav">
-          <ul id="nav" class="l_tinynav1">
-            <li <?php if ($this->is('index')) { echo 'class="current"'; } ?>>
-              <a href="<?php $this->options->siteUrl(); ?>">
-                <?php _e('首页'); ?>
-              </a>
-            </li>
-            <li class="has-children">
-              <a href="#">分类</a>
-              <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=children'); ?>
-            </li>
-            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-            <?php while($pages->next()): ?>
-            <li <?php if($this->is('page', $pages->slug)) { echo 'class="current"'; } ?>>
-              <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>">
-                <?php $pages->title(); ?>
-              </a>
-            </li>
-            <?php endwhile; ?>
-          </ul>
-        </nav>
+        <ul class="navbar-nav">
+          <li <?php if ($this->is('index')) { echo 'class="current"'; } ?>>
+            <a href="<?php $this->options->siteUrl(); ?>">首页</a>
+          </li>
+          <li class="has-children">
+            <a href="#">分类</a>
+            <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=children'); ?>
+          </li>
+          <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+          <?php while($pages->next()): ?>
+          <li <?php if($this->is('page', $pages->slug)) { echo 'class="current"'; } ?>>
+            <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>">
+              <?php $pages->title(); ?>
+            </a>
+          </li>
+          <?php endwhile; ?>
+        </ul>
+        
         <div class="ribbon-right"></div>
       </div>
 	</header>
 
-  <div id="site-main">
+  <div class="site-main">
